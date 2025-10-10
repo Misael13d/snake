@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos de Servicio - Snake Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .back-button {
+            display: inline-block;
+            color: #90e0ef;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border: 1px solid #90e0ef;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background: rgba(144, 224, 239, 0.1);
+        }
+
+        h1 {
+            color: #90e0ef;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            color: #caf0f8;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .content-section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #00b4d8;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            color: #90e0ef;
+            margin: 20px 0 10px 0;
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .warning {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .prohibited-list {
+            background: rgba(220, 53, 69, 0.1);
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-button">← Volver al Juego</a>
+            <h1>Términos de Servicio</h1>
+            <p class="last-updated">Última actualización: Diciembre 2023</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Aceptación de los Términos</h2>
+            <p>Al acceder y utilizar Snake Game Classic ("el Juego"), aceptas cumplir con estos Términos de Servicio y nuestra Política de Privacidad. Si no estás de acuerdo con alguno de estos términos, por favor no utilices nuestro juego.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Descripción del Servicio</h2>
+            <p>Snake Game Classic es un juego de navegador gratuito que ofrece:</p>
+            <ul>
+                <li>Juego clásico de snake con diferentes niveles de dificultad</li>
+                <li>Control de velocidad personalizable</li>
+                <li>Almacenamiento local de puntuaciones y preferencias</li>
+                <li>Experiencia de juego optimizada para dispositivos móviles y desktop</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Uso Aceptable</h2>
+            <p>Al utilizar nuestro juego, aceptas:</p>
+            <ul>
+                <li>Utilizar el juego solo para fines legales y de entretenimiento</li>
+                <li>Respetar los derechos de propiedad intelectual</li>
+                <li>No interferir con el funcionamiento normal del juego</li>
+                <li>No intentar acceder a áreas restringidas del sistema</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Uso Prohibido</h2>
+            <div class="prohibited-list">
+                <p>Queda estrictamente prohibido:</p>
+                <ul>
+                    <li>Modificar, reverse-engineer o descompilar el código del juego</li>
+                    <li>Utilizar bots, scripts o automatización para manipular el juego</li>
+                    <li>Intentar acceder a servidores o sistemas no autorizados</li>
+                    <li>Utilizar el juego para actividades ilegales o fraudulentas</li>
+                    <li>Distribuir malware a través del juego</li>
+                    <li>Suplantar la identidad de otros usuarios</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Propiedad Intelectual</h2>
+            <p>Snake Game Classic y todo su contenido, incluyendo pero no limitado a código, diseño, gráficos, y logotipos, son propiedad de sus respectivos dueños y están protegidos por leyes de propiedad intelectual internacionales.</p>
+            
+            <div class="warning">
+                <p><strong>Nota:</strong> Mientras que el concepto del juego snake es de dominio público, la implementación específica, diseño y código único de esta versión están protegidos.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Limitación de Responsabilidad</h2>
+            <p>El juego se proporciona "tal cual" y "según disponibilidad". No garantizamos que:</p>
+            <ul>
+                <li>El juego esté siempre disponible sin interrupciones</li>
+                <li>El juego esté libre de errores o bugs</li>
+                <li>Los resultados del juego sean siempre precisos</li>
+                <li>El juego sea compatible con todos los dispositivos y navegadores</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Publicidad</h2>
+            <p>El juego puede mostrar anuncios para apoyar su desarrollo y mantenimiento. Al usar el juego, aceptas que:</p>
+            <ul>
+                <li>Puedes ver anuncios durante el juego</li>
+                <li>Los anuncios son proporcionados por redes publicitarias de terceros</li>
+                <li>No tenemos control sobre el contenido específico de los anuncios</li>
+                <li>Puedes utilizar ad-blockers, pero esto puede afectar la funcionalidad</li>
+            </ul>
+            <!-- Después de la sección de Publicidad -->
+            <h3>Enlaces a Redes Publicitarias</h3>
+            <p>Puedes revisar las políticas de privacidad de nuestros proveedores de publicidad:</p>
+            <ul>
+                <li><a href="https://adsterra.com/privacy-policy/" style="color: #90e0ef;">Política de Privacidad de Adsterra</a></li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Privacidad y Datos</h2>
+            <p>Tu privacidad es importante para nosotros. Consulta nuestra <a href="privacy.html" style="color: #90e0ef;">Política de Privacidad</a> para entender cómo manejamos tu información. En resumen:</p>
+            <ul>
+                <li>No recopilamos información personal identificable</li>
+                <li>Los datos de juego se almacenan localmente en tu dispositivo</li>
+                <li>Utilizamos cookies y tecnologías similares para publicidad</li>
+                <li>Puedes eliminar tus datos limpiando el almacenamiento local de tu navegador</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Modificaciones del Servicio</h2>
+            <p>Nos reservamos el derecho de:</p>
+            <ul>
+                <li>Modificar o discontinuar el juego en cualquier momento</li>
+                <li>Cambiar estas condiciones de servicio</li>
+                <li>Actualizar o modificar características del juego</li>
+                <li>Limitar el acceso al juego por cualquier razón</li>
+            </ul>
+            <p>Notificaremos sobre cambios importantes en estos términos actualizando la fecha de "última actualización".</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Ley Aplicable</h2>
+            <p>Estos términos se rigen por las leyes internacionales aplicables. Cualquier disputa relacionada con estos términos o el uso del juego estará sujeta a la jurisdicción competente.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Terminación</h2>
+            <p>Podemos suspender o terminar tu acceso al juego inmediatamente, sin previo aviso, por cualquier violación de estos Términos de Servicio.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Contacto</h2>
+            <p>Si tienes alguna pregunta sobre estos Términos de Servicio, puedes contactarnos en:</p>
+            <p><strong>Email:</strong> legal@snakegame.com</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" class="back-button">Volver al Juego</a>
+        </div>
+    </div>
+
+    
+<footer style="text-align: center; margin-top: 30px; padding: 20px; color: #caf0f8;">
+    <div>
+        <a href="privacy.html" style="color: #90e0ef; margin: 0 10px;">Política de Privacidad</a>
+        <a href="terms.html" style="color: #90e0ef; margin: 0 10px;">Términos de Servicio</a>
+        <a href="contact.html" style="color: #90e0ef; margin: 0 10px;">Contacto</a>
+    </div>
+    <p style="margin-top: 10px; font-size: 0.9rem;">&copy; 2025 Snake Game Classic. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Snake Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .back-button {
+            display: inline-block;
+            color: #90e0ef;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border: 1px solid #90e0ef;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background: rgba(144, 224, 239, 0.1);
+        }
+
+        h1 {
+            color: #90e0ef;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .content-section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #00b4d8;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            color: #90e0ef;
+            margin: 20px 0 10px 0;
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .contact-info {
+            background: rgba(0, 180, 216, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #00b4d8;
+        }
+
+        .contact-type {
+            font-weight: bold;
+            color: #90e0ef;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-detail {
+            color: #caf0f8;
+        }
+
+        .important-note {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .adsterra-links {
+            background: rgba(40, 167, 69, 0.1);
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-button">← Volver al Juego</a>
+            <h1>Contacto</h1>
+            <p>Estamos aquí para ayudarte con cualquier consulta</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Información de Contacto</h2>
+            <p>Para reportar problemas, hacer preguntas sobre publicidad, o cualquier consulta relacionada con Snake Game Classic:</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-type">Email para Publicidad y Negocios:</span>
+                    <span class="contact-detail">misaelantonymerma@gmail.com</span>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-type">Soporte Técnico y Problemas con el Juego:</span>
+                    <span class="contact-detail">misaelantonymerma@gmail.com</span>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-type">Consultas Generales:</span>
+                    <span class="contact-detail">misaelantonymerma@gmail.com</span>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-type">Privacidad y Datos:</span>
+                    <span class="contact-detail">misaelantonymerma@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Problemas con Anuncios</h2>
+            <div class="important-note">
+                <h3>⚠️ Reportar Problemas de Publicidad</h3>
+                <p>Si experimentas alguno de estos problemas con los anuncios, contáctanos inmediatamente:</p>
+                <ul>
+                    <li>Contenido inapropiado o ofensivo</li>
+                    <li>Anuncios que no funcionan correctamente</li>
+                    <li>Pop-ups excesivos o invasivos</li>
+                    <li>Problemas de rendimiento relacionados con anuncios</li>
+                    <li>Contenido malicioso o sospechoso</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Información de Adsterra</h2>
+            <div class="adsterra-links">
+                <h3>🔗 Enlaces Importantes de Adsterra</h3>
+                <p>Como usuario, tienes derecho a conocer y gestionar tu privacidad:</p>
+                
+                <div class="contact-item">
+                    <span class="contact-type">Política de Privacidad de Adsterra:</span>
+                    <a href="https://adsterra.com/privacy-policy/" class="contact-detail" style="color: #90e0ef;">https://adsterra.com/privacy-policy/</a>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-type">Opt-Out de Publicidad Personalizada:</span>
+                    <a href="https://adsterra.com/opt-out/" class="contact-detail" style="color: #90e0ef;">https://adsterra.com/opt-out/</a>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-type">Acuerdo de Publicador:</span>
+                    <a href="https://adsterra.com/publisher-agreement.html" class="contact-detail" style="color: #90e0ef;">https://adsterra.com/publisher-agreement.html</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Tiempo de Respuesta</h2>
+            <p>Nos esforzamos por responder a todas las consultas en un plazo de 24-48 horas hábiles. Para problemas urgentes relacionados con seguridad o contenido inapropiado, priorizaremos tu solicitud.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Otros Canales</h2>
+            <p>También puedes encontrarnos en nuestras redes sociales para estar al tanto de actualizaciones y novedades del juego.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" class="back-button">Volver al Juego</a>
+            <div style="margin-top: 20px;">
+                <a href="privacy.html" style="color: #90e0ef; margin: 0 10px;">Política de Privacidad</a>
+                <a href="terms.html" style="color: #90e0ef; margin: 0 10px;">Términos de Servicio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 30px; padding: 20px; color: #caf0f8; border-top: 1px solid #444;">
+    <div>
+        <a href="privacy.html" style="color: #90e0ef; margin: 0 10px;">Política de Privacidad</a>
+        <a href="terms.html" style="color: #90e0ef; margin: 0 10px;">Términos de Servicio</a>
+        <a href="contact.html" style="color: #90e0ef; margin: 0 10px;">Contacto</a>
+    </div>
+    <p style="margin-top: 10px; font-size: 0.9rem;">&copy; 2025 Snake Game Classic. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
+

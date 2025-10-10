@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Agregar en el <head> de index.html -->
+    <meta name="description" content="Juega al clásico Snake Game online. Divertido juego de arcade con múltiples niveles y controles para móvil. Gratis y sin descargas.">
+    <meta name="keywords" content="snake game, juego serpiente, arcade, juego clásico, juego online, juego móvil">
+    <meta name="author" content="Snake Game Classic">
+
+    <title>Snake Game Classic - Juego de Arcade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: clamp(3rem, 10vw, 4rem);
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 3rem);
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #00b4d8, #90e0ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 180, 216, 0.5);
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 4vw, 1.2rem);
+            margin-bottom: 30px;
+            color: #caf0f8;
+            opacity: 0.9;
+            padding: 0 10px;
+        }
+
+        .game-preview {
+            width: min(300px, 90vw);
+            height: min(300px, 90vw);
+            margin: 0 auto 30px;
+            border: 3px solid #00b4d8;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0, 180, 216, 0.3);
+            background: #000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .game-preview:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 70px rgba(0, 180, 216, 0.5);
+            border-color: #90e0ef;
+        }
+
+        .game-preview:active {
+            transform: scale(0.95);
+        }
+
+        .preview-canvas {
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+
+        .click-hint {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+            color: #90e0ef;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            opacity: 0.8;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 0.4; }
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 30px 0;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .features {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: clamp(15px, 4vw, 20px);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .feature h3 {
+            color: #90e0ef;
+            margin-bottom: 8px;
+            font-size: clamp(1rem, 4vw, 1.1rem);
+        }
+
+        .feature p {
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            line-height: 1.4;
+        }
+
+        .footer-links {
+            margin-top: 25px;
+            display: flex;
+            gap: clamp(15px, 5vw, 20px);
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .footer-links a {
+            color: #caf0f8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            padding: 5px 10px;
+        }
+
+        .footer-links a:hover {
+            color: #00b4d8;
+        }
+
+        /* Mejoras para orientación landscape en móviles */
+        @media (max-height: 600px) and (orientation: landscape) {
+            body {
+                padding: 10px;
+                justify-content: flex-start;
+            }
+            
+            .container {
+                justify-content: flex-start;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 5px;
+            }
+            
+            .subtitle {
+                margin-bottom: 15px;
+            }
+            
+            .game-preview {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 15px;
+            }
+            
+            .features {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                margin: 15px 0;
+            }
+            
+            .feature {
+                min-height: 80px;
+                padding: 10px;
+            }
+        }
+
+        /* Soporte para touch en dispositivos móviles */
+        @media (hover: none) {
+            .game-preview:hover {
+                transform: none;
+                box-shadow: 0 0 50px rgba(0, 180, 216, 0.3);
+            }
+            
+            .game-preview:active {
+                transform: scale(0.95);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🐍</div>
+        <h1>Snake Game Classic</h1>
+        <p class="subtitle">Haz clic en el juego para comenzar</p>
+        
+        <div class="game-preview" onclick="window.location.href='game.html'">
+            <canvas class="preview-canvas" id="previewCanvas"></canvas>
+            <div class="click-hint">Haz clic para jugar</div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>🎮 Control Simple</h3>
+                <p>Usa las flechas o controles táctiles</p>
+            </div>
+            <div class="feature">
+                <h3>⚡ Juego Rápido</h3>
+                <p>Diversión instantánea en cualquier dispositivo</p>
+            </div>
+            <div class="feature">
+                <h3>🏆 Competitivo</h3>
+                <p>Supera tu récord personal</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="privacy.html">Política de Privacidad</a>
+            <a href="terms.html">Términos de Servicio</a>
+        </div>
+    </div>
+
+    <script>
+        // Animación simple del preview responsive
+        const canvas = document.getElementById('previewCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            drawPreview();
+        }
+        
+        // Dibujar preview estático
+        function drawPreview() {
+            if (!canvas.width || !canvas.height) return;
+            
+            // Fondo
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Serpiente
+            ctx.fillStyle = '#0f0';
+            const segmentSize = Math.min(canvas.width, canvas.height) / 15;
+            for (let i = 0; i < 5; i++) {
+                ctx.fillRect(segmentSize + i * segmentSize, canvas.height / 2 - segmentSize / 2, segmentSize - 2, segmentSize - 2);
+            }
+            
+            // Comida
+            ctx.fillStyle = '#f00';
+            ctx.fillRect(canvas.width * 0.6, canvas.height / 2 - segmentSize / 2, segmentSize - 2, segmentSize - 2);
+            
+            // Puntos
+            ctx.fillStyle = '#fff';
+            ctx.font = `${Math.max(12, segmentSize * 0.8)}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.fillText('Puntuación: 50', canvas.width / 2, segmentSize * 2);
+        }
+        
+        // Inicializar y redimensionar en cambios de tamaño
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('orientationchange', resizeCanvas);
+
+        // También permitir Enter y espacio para accesibilidad
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                window.location.href = 'game.html';
+            }
+        });
+    </script>
+
+    <footer style="text-align: center; margin-top: 30px; padding: 20px; color: #caf0f8;">
+    <div>
+        <a href="privacy.html" style="color: #90e0ef; margin: 0 10px;">Política de Privacidad</a>
+        <a href="terms.html" style="color: #90e0ef; margin: 0 10px;">Términos de Servicio</a>
+        <a href="contact.html" style="color: #90e0ef; margin: 0 10px;">Contacto</a>
+    </div>
+    <p style="margin-top: 10px; font-size: 0.9rem;">&copy; 2025 Snake Game Classic. Todos los derechos reservados.</p>
+
+    </footer>
+</body>
+</html>
+
